@@ -5,7 +5,7 @@
   "browserslist": "last 2 Chrome versions",
   "scripts": {
     "build": "webpack --config ./webpack.prod.js",
-    "dev": "concurrently \"webpack --config ./webpack.dev.js\" \"odemon server\"",
+    "dev": "concurrently \"webpack --config ./webpack.dev.js\" \"nodemon server\"",
     "start": "forever start server"
   },
   "dependencies": {
