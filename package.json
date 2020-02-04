@@ -5,13 +5,17 @@
   "browserslist": "last 2 Chrome versions",
   "scripts": {
     "build": "webpack --config ./webpack.prod.js",
-    "dev": "webpack --config ./webpack.dev.js",
-    "start-dev": "nodemon server"
+    "dev": "concurrently \"webpack --config ./webpack.dev.js\" \"odemon server\"",
+    "start": "forever start server"
   },
   "dependencies": {
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
     "@babel/preset-react": "^7.8.3",
+    "@babel/runtime": "^7.8.4",
     "clean-webpack-plugin": "^3.0.0",
+    "concurrently": "^5.1.0",
+    "forever": "^2.0.0",
     "node-sass": "^4.13.1",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "react": "^16.12.0",
